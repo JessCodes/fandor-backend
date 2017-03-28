@@ -1,8 +1,14 @@
 class Api::RatingsController < ApplicationController
+  
+  def show
+    @rating = Rating.find(params[:id])
+    render json: @rating
+  end
+
   def create
     @rating = Rating.new(rating_params)
     if @rating.save
-      format.json { render json: @rating }
+      render json: @rating
     else
       render status: 422
     end
@@ -24,6 +30,6 @@ class Api::RatingsController < ApplicationController
 
   private
   def rating_params
-    params.require(:rating).permit(:rating, :film_id, :user_id)
+    params.require(:rating).permit(:value, :film_id)
   end
 end
