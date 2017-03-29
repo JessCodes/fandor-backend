@@ -38,3 +38,4 @@ Type ``bundle exec rspec`` into the console.
 
 ----
 ## Schema:
+![schema](fandor_schema.png)
