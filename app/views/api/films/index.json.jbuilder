@@ -1,3 +1,5 @@
-json.array! @films do |film|
-  json.partial! "api/films/film", film: film
+json.data do
+  json.array! @films do |film|
+    json.partial! "api/films/film", film: film
+  end
 end

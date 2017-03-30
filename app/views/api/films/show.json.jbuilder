@@ -1,1 +1,3 @@
-json.partial! 'api/shared/film', film: @film
+json.data do
+  json.partial! 'api/films/film', film: @film
+end

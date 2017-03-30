@@ -1,11 +1,11 @@
 class Api::FilmsController < ApplicationController
   def index
     @films = Film.all
-    render json: @films
+    # render json: @films
   end
 
   def show
     @film = Film.find_by_id(params[:id])
-    render json: @film
+    # render json: @film
   end
 end
